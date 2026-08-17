@@ -1,0 +1,81 @@
+\begin{longtable}{lllrrrr}
+\caption{McNemar tests of paired predictions for every model pair in every sector, on the common evaluation support. $b$ and $c$ are the discordant counts; $p$-values are Holm-adjusted across the whole family.}\label{tab:mcnemar}\\
+\toprule
+Sector & Model A & Model B & $b$ & $c$ & $p$ & $p_{\text{Holm}}$ \\
+\midrule
+\endfirsthead
+\toprule
+Sector & Model A & Model B & $b$ & $c$ & $p$ & $p_{\text{Holm}}$ \\
+\midrule
+\endhead
+\midrule \multicolumn{7}{r}{\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Technology & LogisticRegression & RandomForest & 12222 & 11229 & 0.0000 & 0.0000 \\
+Technology & LSTM & RandomForest & 11969 & 11062 & 0.0000 & 0.0000 \\
+Industrials & LSTM & XGBoost & 10269 & 9454 & 0.0000 & 0.0000 \\
+Industrials & LSTM & RandomForest & 12991 & 12192 & 0.0000 & 0.0000 \\
+Industrials & LogisticRegression & XGBoost & 9765 & 9155 & 0.0000 & 0.0006 \\
+Technology & RandomForest & XGBoost & 9043 & 9568 & 0.0001 & 0.0075 \\
+Industrials & LogisticRegression & RandomForest & 12667 & 12073 & 0.0002 & 0.0098 \\
+Technology & LogisticRegression & XGBoost & 8535 & 8067 & 0.0003 & 0.0171 \\
+Financial Services & LogisticRegression & RandomForest & 13014 & 12453 & 0.0004 & 0.0261 \\
+Consumer Cyclical & LSTM & RandomForest & 12183 & 11648 & 0.0005 & 0.0309 \\
+Utilities & LSTM & LogisticRegression & 3794 & 4101 & 0.0006 & 0.0321 \\
+Basic Materials & LSTM & LogisticRegression & 2671 & 2433 & 0.0009 & 0.0500 \\
+Financial Services & LSTM & RandomForest & 12909 & 12394 & 0.0012 & 0.0665 \\
+Healthcare & LogisticRegression & XGBoost & 11412 & 10961 & 0.0026 & 0.1391 \\
+Technology & LSTM & XGBoost & 8458 & 8076 & 0.0030 & 0.1584 \\
+Consumer Cyclical & LogisticRegression & RandomForest & 12670 & 12206 & 0.0033 & 0.1698 \\
+Energy & LSTM & LogisticRegression & 1769 & 1612 & 0.0073 & 0.3650 \\
+Consumer Cyclical & LSTM & XGBoost & 9652 & 9302 & 0.0112 & 0.5510 \\
+Utilities & LogisticRegression & XGBoost & 5467 & 5215 & 0.0152 & 0.7276 \\
+Basic Materials & LSTM & RandomForest & 4478 & 4253 & 0.0165 & 0.7763 \\
+Industrials & LSTM & LogisticRegression & 4467 & 4262 & 0.0290 & 1.0000 \\
+Consumer Defensive & LSTM & XGBoost & 5807 & 5574 & 0.0297 & 1.0000 \\
+Basic Materials & LSTM & XGBoost & 4270 & 4071 & 0.0302 & 1.0000 \\
+Energy & LSTM & XGBoost & 4284 & 4095 & 0.0400 & 1.0000 \\
+Financial Services & RandomForest & XGBoost & 9017 & 9293 & 0.0421 & 1.0000 \\
+Financial Services & LogisticRegression & XGBoost & 10201 & 9916 & 0.0452 & 1.0000 \\
+Consumer Cyclical & LogisticRegression & XGBoost & 10215 & 9936 & 0.0502 & 1.0000 \\
+Communication Services & LSTM & XGBoost & 4576 & 4756 & 0.0639 & 1.0000 \\
+Real Estate & RandomForest & XGBoost & 3788 & 3632 & 0.0720 & 1.0000 \\
+Healthcare & LSTM & XGBoost & 10884 & 10621 & 0.0740 & 1.0000 \\
+Consumer Defensive & LogisticRegression & XGBoost & 5977 & 5783 & 0.0751 & 1.0000 \\
+Healthcare & LogisticRegression & RandomForest & 12804 & 12526 & 0.0818 & 1.0000 \\
+Communication Services & LSTM & LogisticRegression & 2464 & 2588 & 0.0835 & 1.0000 \\
+Healthcare & LSTM & LogisticRegression & 5755 & 5943 & 0.0838 & 1.0000 \\
+Energy & RandomForest & XGBoost & 2692 & 2567 & 0.0873 & 1.0000 \\
+Consumer Defensive & LSTM & RandomForest & 6736 & 6539 & 0.0889 & 1.0000 \\
+Financial Services & LSTM & XGBoost & 10257 & 10018 & 0.0946 & 1.0000 \\
+Utilities & LogisticRegression & RandomForest & 5828 & 5665 & 0.1308 & 1.0000 \\
+Consumer Cyclical & RandomForest & XGBoost & 8907 & 9092 & 0.1702 & 1.0000 \\
+Consumer Defensive & LogisticRegression & RandomForest & 6848 & 6690 & 0.1772 & 1.0000 \\
+Utilities & LSTM & RandomForest & 5549 & 5693 & 0.1774 & 1.0000 \\
+Real Estate & LSTM & XGBoost & 4932 & 4803 & 0.1945 & 1.0000 \\
+Healthcare & RandomForest & XGBoost & 9362 & 9189 & 0.2067 & 1.0000 \\
+Communication Services & RandomForest & XGBoost & 2954 & 3049 & 0.2250 & 1.0000 \\
+Real Estate & LogisticRegression & XGBoost & 5105 & 4996 & 0.2826 & 1.0000 \\
+Utilities & RandomForest & XGBoost & 3846 & 3757 & 0.3129 & 1.0000 \\
+Energy & LogisticRegression & RandomForest & 4233 & 4326 & 0.3200 & 1.0000 \\
+Technology & LSTM & LogisticRegression & 3935 & 4021 & 0.3406 & 1.0000 \\
+Communication Services & LSTM & RandomForest & 4544 & 4629 & 0.3805 & 1.0000 \\
+Consumer Cyclical & LSTM & LogisticRegression & 5189 & 5118 & 0.4905 & 1.0000 \\
+Energy & LSTM & RandomForest & 4355 & 4291 & 0.4981 & 1.0000 \\
+Communication Services & LogisticRegression & XGBoost & 4589 & 4645 & 0.5671 & 1.0000 \\
+Healthcare & LSTM & RandomForest & 12411 & 12321 & 0.5714 & 1.0000 \\
+Consumer Defensive & LSTM & LogisticRegression & 2308 & 2269 & 0.5743 & 1.0000 \\
+Utilities & LSTM & XGBoost & 4875 & 4930 & 0.5855 & 1.0000 \\
+Financial Services & LSTM & LogisticRegression & 5205 & 5251 & 0.6599 & 1.0000 \\
+Real Estate & LogisticRegression & RandomForest & 5533 & 5580 & 0.6626 & 1.0000 \\
+Basic Materials & LogisticRegression & XGBoost & 4512 & 4551 & 0.6898 & 1.0000 \\
+Communication Services & LogisticRegression & RandomForest & 4714 & 4675 & 0.6949 & 1.0000 \\
+Consumer Defensive & RandomForest & XGBoost & 5295 & 5259 & 0.7333 & 1.0000 \\
+Energy & LogisticRegression & XGBoost & 4177 & 4145 & 0.7340 & 1.0000 \\
+Basic Materials & RandomForest & XGBoost & 2972 & 2998 & 0.7463 & 1.0000 \\
+Real Estate & LSTM & LogisticRegression & 2353 & 2333 & 0.7814 & 1.0000 \\
+Real Estate & LSTM & RandomForest & 5308 & 5335 & 0.8010 & 1.0000 \\
+Basic Materials & LogisticRegression & RandomForest & 4669 & 4682 & 0.9012 & 1.0000 \\
+Industrials & RandomForest & XGBoost & 9474 & 9458 & 0.9132 & 1.0000 \\
+\end{longtable}

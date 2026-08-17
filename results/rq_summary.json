@@ -1,0 +1,135 @@
+{
+  "rq1": {
+    "test": "Friedman, sectors as treatments, model x fold as blocks",
+    "chi2": 29.054545454545405,
+    "p": 0.0012209584332794406,
+    "k_treatments": 11,
+    "n_blocks": 20,
+    "chi2_pooled_blocks": 25.818181818181813,
+    "p_pooled_blocks": 0.003992571795308209,
+    "n_blocks_pooled": 4,
+    "significant": true,
+    "sector_mean_spread": 0.019729045606242668,
+    "sector_means": {
+      "Real Estate": 0.4849343013035332,
+      "Energy": 0.4931901776536869,
+      "Utilities": 0.49510026877739066,
+      "Basic Materials": 0.4978459594581151,
+      "Technology": 0.5000612928587358,
+      "Healthcare": 0.5001902282633018,
+      "Industrials": 0.5006786309035063,
+      "Financial Services": 0.501112292917866,
+      "Communication Services": 0.5012600063115773,
+      "Consumer Cyclical": 0.5026590363536649,
+      "Consumer Defensive": 0.5046633469097759
+    }
+  },
+  "rq2": {
+    "test": "Spearman(SCI, mean AUC) across sectors",
+    "rho": 0.21818181818181823,
+    "p": 0.519248247554982,
+    "negative_as_H2_predicts": false,
+    "significant": false,
+    "band_means": {
+      "low": 0.49840810606108993,
+      "medium": 0.495412274161567,
+      "high": 0.5004565737455233
+    },
+    "mannwhitney_U_H2": 6.0,
+    "mannwhitney_p_H2": 0.7571428571428571,
+    "mannwhitney_p_two_sided": 0.6857142857142857,
+    "per_model": [
+      {
+        "model": "LogisticRegression",
+        "rho": 0.33636363636363636,
+        "p": 0.31182431390038623,
+        "p_holm": 1.0
+      },
+      {
+        "model": "XGBoost",
+        "rho": 0.24545454545454545,
+        "p": 0.4669223669820163,
+        "p_holm": 1.0
+      },
+      {
+        "model": "LSTM",
+        "rho": 0.10909090909090911,
+        "p": 0.7495085962341482,
+        "p_holm": 1.0
+      },
+      {
+        "model": "RandomForest",
+        "rho": -0.19090909090909092,
+        "p": 0.5739131682855215,
+        "p_holm": 1.0
+      }
+    ]
+  },
+  "rq3": {
+    "test": "Friedman + Nemenyi",
+    "chi2": 3.327272727272714,
+    "p": 0.34386479140472176,
+    "significant": false,
+    "avg_ranks": {
+      "RandomForest": 2.0,
+      "LSTM": 2.4545454545454546,
+      "XGBoost": 2.5454545454545454,
+      "LogisticRegression": 3.0
+    },
+    "max_rank_gap": 1.0,
+    "critical_difference": 1.41418795630481
+  },
+  "adaptive": {
+    "fit_folds": [
+      "1",
+      "2",
+      "3"
+    ],
+    "score_folds": [
+      "4",
+      "5"
+    ],
+    "band_to_model": {
+      "high": {
+        "model": "LSTM",
+        "auc": 0.5050639449191444
+      },
+      "medium": {
+        "model": "LSTM",
+        "auc": 0.502421257361557
+      },
+      "low": {
+        "model": "LSTM",
+        "auc": 0.5016529765044337
+      }
+    },
+    "oos_adaptive_mean": 0.5033598300630355,
+    "oos_best_fixed_model": "LSTM",
+    "oos_best_fixed_mean": 0.5033598300630355,
+    "oos_uplift": 0.0,
+    "in_sample_adaptive_mean": 0.5000608888588541,
+    "in_sample_best_fixed_mean": 0.4995815091691457,
+    "in_sample_best_fixed_model": "RandomForest",
+    "per_sector_oracle_mean": 0.5019210787111902
+  },
+  "bootstrap": {
+    "B": 500,
+    "rho_ci": [
+      -0.39568181818181825,
+      0.5320454545454544
+    ],
+    "cells_excluding_half": 3
+  },
+  "mcnemar_significant": 12,
+  "runtime_minutes": 67.1,
+  "config": {
+    "n_splits": 5,
+    "n_seeds_lstm": 5,
+    "include_lag0": false,
+    "seq_len": 10,
+    "lstm_epochs": 10,
+    "bootstrap_B": 500,
+    "random_state": 42,
+    "quick_mode": false
+  }
+}

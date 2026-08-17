@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+merged_data.csv
+results/pred_parts/
+results/lag0_parts/
+*_backup.py
+*.aux
+*.log
+*.out
+*.synctex.gz
